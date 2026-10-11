@@ -1,0 +1,45 @@
+# ==============================================================================
+# HỆ THỐNG THU THẬP, LƯU TRỮ VÀ TIỀN XỬ LÝ DỮ LIỆU IoT (INT14149)
+# Sinh viên: Bùi Cẩm Ly - Mã SV: B23DCCN522
+# File cấu hình tập trung (Central Configuration)
+# ==============================================================================
+
+mqtt:
+  broker: "broker.emqx.io"
+  port: 1883
+  keepalive: 60
+  client_id_prefix: "b23dccn522_collector"
+  topic_raw: "iot/b23dccn522/sensor/raw"
+  qos: 1
+
+influxdb:
+  url: "http://localhost:8086"
+  token: "my-super-secret-auth-token-b23dccn522-ptit"
+  org: "ptit_iot"
+  bucket_raw: "iot_telemetry"
+  bucket_processed: "iot_telemetry"
+  measurement_raw: "sensor_raw"
+  measurement_processed: "sensor_processed"
+  retention_days: 30
+
+validation:
+  temp_min: -10.0
+  temp_max: 60.0
+  humidity_min: 0.0
+  humidity_max: 100.0
+  light_min: 0.0
+  light_max: 5000.0
+
+preprocessing:
+  resample_rule: "1min"
+  z_score_threshold: 3.0
+  iqr_factor: 1.5
+  rolling_window: 5
+  time_range_lookback: "1h"
+
+simulation:
+  device_id: "ESP32_STATION_01"
+  location: "PTIT_LAB_IOT"
+  interval_seconds: 3.0
+  outlier_prob: 0.05
+  missing_prob: 0.03

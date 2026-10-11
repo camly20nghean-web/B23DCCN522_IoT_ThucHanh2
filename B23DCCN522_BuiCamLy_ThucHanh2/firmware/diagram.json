@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "author": "Bui Cam Ly (B23DCCN522)",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 67.2, "left": 14.44, "attrs": {} },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht1",
+      "top": -120,
+      "left": -80,
+      "attrs": { "temperature": "27.5", "humidity": "65" }
+    },
+    { "type": "wokwi-photoresistor-sensor", "id": "ldr1", "top": -120, "left": 120, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "dht1:VCC", "esp:3V3", "red", [ "v62.7", "h84.05" ] ],
+    [ "dht1:GND", "esp:GND.1", "black", [ "v0" ] ],
+    [ "dht1:SDA", "esp:15", "green", [ "v302.7", "h189.9", "v-57.6" ] ],
+    [ "ldr1:VCC", "esp:3V3", "red", [ "h15.2", "v161.6", "h-249.6", "v38.4" ] ],
+    [ "ldr1:GND", "esp:GND.2", "black", [ "h53.6", "v190" ] ],
+    [ "ldr1:AO", "esp:34", "blue", [ "h34.4", "v103.3", "h-326.4", "v105.6" ] ]
+  ],
+  "dependencies": { "PubSubClient": "2.8", "DHT sensor library": "1.4.4" }
+}
