@@ -45,7 +45,6 @@ B23DCCN522_Bùi Cẩm Ly_Thực hành 2/
 │   └── latency_evaluator.py      # Script đo độ trễ End-to-End và xuất ảnh biểu đồ phân tích
 ├── report/
 │   ├── Bao_cao_Thuc_hanh_so_2_B23DCCN522.docx  # Báo cáo Word hoàn chỉnh 4-6 trang
-│   ├── generate_report.py        # Mã nguồn sinh file Báo cáo Word
 │   └── images/                   # Thư mục lưu các biểu đồ thực nghiệm
 ├── start_influxdb.bat            # Phím tắt 1-click khởi động InfluxDB Database
 ├── requirements.txt              # Danh sách thư viện Python cần thiết
