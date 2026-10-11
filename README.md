@@ -145,13 +145,4 @@ Tại đây bạn có thể:
 
 ---
 
-## 🏆 5. Đánh giá theo thang điểm đề bài
 
-| Tiêu chí đề bài | Yêu cầu | Điểm tối đa | Đạt được trong dự án |
-| :--- | :--- | :---: | :---: |
-| **Pipeline thu thập & lưu trữ** | MQTT broker chuẩn, validate JSON, ghi InfluxDB, chống trùng lặp, retention policy. | **3.0** | ✅ **3.0 / 3.0** |
-| **Tiền xử lý dữ liệu** | Xử lý Missing values, phát hiện Outlier bằng cả IQR & Z-score, Resampling, Feature Engineering, Normalization. | **2.5** | ✅ **2.5 / 2.5** |
-| **Dashboard real-time** | Streamlit Dashboard hiển thị real-time, overlay Raw vs Processed, đo trễ. | **2.0** | ✅ **2.0 / 2.0** |
-| **Chất lượng code & Docs** | Code module rõ ràng, xử lý ngoại lệ chặt chẽ, README chi tiết. | **1.5** | ✅ **1.5 / 1.5** |
-| **Báo cáo & Phân tích** | Báo cáo Word 4-6 trang đầy đủ sơ đồ kiến trúc, schema, ảnh dashboard, phân tích số liệu. | **1.0** | ✅ **1.0 / 1.0** |
-| **Tổng kết** | | **10.0** | 🌟 **10.0 / 10.0** |
